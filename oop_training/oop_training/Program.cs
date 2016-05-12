@@ -12,6 +12,7 @@ namespace oop_training
         static void Main(string[] args)
         {
             Console.WriteLine("Hola Mundo  ");
+            Console.WriteLine("Hola Mundo  ");
             Console.Read();
         }
     }
