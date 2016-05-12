@@ -11,8 +11,20 @@ namespace oop_training
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hola Mundo  ");
-            Console.WriteLine("Hola Mundo  ");
+            Console.WriteLine("Alumno:");
+
+            var alumno1 = new alumno()
+            {
+                Id = 1,
+                name = "Jean",
+                lastname = "Abreu",
+                age = 23,
+                email = "abreustudio@gmail.com" ,
+                telephone = "8094191544"
+            };
+
+            
+
             Console.Read();
         }
     }
