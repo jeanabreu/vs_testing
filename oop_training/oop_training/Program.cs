@@ -19,13 +19,17 @@ namespace oop_training
                 name = "Jean",
                 lastname = "Abreu",
                 age = 23,
-                email = "abreustudio@gmail.com" ,
+                email = "abreustudio@gmail.com",
                 telephone = "8094191544"
             };
 
-            Console.WriteLine(alumno1);
-        
+            var persona1 = alumno1;
+
             
+
+            Console.WriteLine();
+
+
 
             Console.Read();
         }
