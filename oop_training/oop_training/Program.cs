@@ -11,7 +11,7 @@ namespace oop_training
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Alumno:");
+            Console.WriteLine("Alumno:\n");
 
             var alumno1 = new alumno()
             {
@@ -23,6 +23,8 @@ namespace oop_training
                 telephone = "8094191544"
             };
 
+            Console.WriteLine(alumno1);
+        
             
 
             Console.Read();
