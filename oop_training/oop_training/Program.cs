@@ -7,16 +7,19 @@ using System.Threading.Tasks;
 
 namespace oop_training
 {
+    
+
     class Program
     {
-        public void test()
+        /*
+        public void string test()
         {
             Console.WriteLine("test");
-        } 
-
+        }
+        */
         static void Main(string[] args)
         {
-            /* Console.WriteLine("Alumno:\n");
+           Console.WriteLine("Alumno:\n");
 
              var alumno1 = new alumno()
              {
@@ -30,7 +33,7 @@ namespace oop_training
 
              var persona1 = alumno1;
 
-             */
+            Console.WriteLine(persona1);
 
             int number = 7;
 
@@ -48,11 +51,11 @@ namespace oop_training
             x = Convert.ToInt16(Console.ReadLine());
 
             
-            for (int i = 1; i < x; i++) 
+           /* for (int i = 1; i < x; i++) 
             {
                 test();
             }
-             
+           */  
             Console.Read();
 
 
