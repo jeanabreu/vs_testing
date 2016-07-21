@@ -27,7 +27,7 @@ namespace WebApplication1.Views
             }
             else
             {
-                NotConsulta.InnerHtml = " <p class='alert alert-danger'> No se encontro el # de Cotizacion! </p> ";
+                NotConsulta.InnerHtml = " <p class='alert alert-danger'> No se encontro el # de Cotizacion o la misma fue Procesada! </p> ";
             }
         }
     }
