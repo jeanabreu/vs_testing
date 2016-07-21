@@ -20,15 +20,18 @@
 
           <div class="container">
         <div class="row">
+                
             <div class="col-md-4 col-md-offset-4">
+                
                 <div class="login-panel panel panel-default">
+
                     <div class="panel-heading">
-                         <div   runat="server" id="myDiv" />
+                         
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                    
                     <div class="panel-body">
-                        
+                        <div   runat="server"  id="myDiv" /> 
                         <form role="form">
                             <fieldset>
                                 <div class="form-group">
@@ -44,7 +47,7 @@
                                 </div>
                              
                                 <asp:Button cssClass="btn btn-lg btn-success btn-block" runat="server" ID="Login" OnClick="Login_Click"  Text="Login"/>
-                                 
+                            
                                 
                             </fieldset>
                         </form>
