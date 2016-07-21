@@ -123,7 +123,11 @@
     <Content Include="Views\bower_components\bootstrap\js\tooltip.js" />
     <Content Include="Views\bower_components\bootstrap\js\transition.js" />
     <Content Include="Views\bower_components\bootstrap\package.js" />
-    <Content Include="Views\page_ImprCotizacion.aspx" />
+    <Content Include="Views\dist\css\sb-admin-2.css" />
+    <Content Include="Views\dist\css\timeline.css" />
+    <Content Include="Views\dist\js\sb-admin-2.js" />
+    <Content Include="Views\Mod_Cotizaciones\page_ImprCotizacion.aspx" />
+    <Content Include="Views\Mod_Portada\page_Portada.aspx" />
     <Content Include="Views\website.Master" />
     <Content Include="Views\bower_components\bootstrap\.bower.json" />
     <Content Include="Views\bower_components\bootstrap\bower.json" />
@@ -254,12 +258,19 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\page_ImprCotizacion.aspx.cs">
+    <Compile Include="Views\Mod_Cotizaciones\page_ImprCotizacion.aspx.cs">
       <DependentUpon>page_ImprCotizacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\page_ImprCotizacion.aspx.designer.cs">
+    <Compile Include="Views\Mod_Cotizaciones\page_ImprCotizacion.aspx.designer.cs">
       <DependentUpon>page_ImprCotizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mod_Portada\page_Portada.aspx.cs">
+      <DependentUpon>page_Portada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Mod_Portada\page_Portada.aspx.designer.cs">
+      <DependentUpon>page_Portada.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\website.Master.cs">
       <DependentUpon>website.Master</DependentUpon>

@@ -11,7 +11,7 @@ namespace WebApplication1.Views
 {
 
 
-    public partial class page_ImprCotizacion
+    public partial class page_Portada
     {
     }
 }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication1.Views
 {
-    public partial class page_ImprCotizacion : System.Web.UI.Page
+    public partial class page_Portada : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

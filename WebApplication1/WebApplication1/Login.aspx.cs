@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace WebApplication1
 {
     public partial class WebForm1 : System.Web.UI.Page
@@ -29,7 +30,9 @@ namespace WebApplication1
 
             if (usuario == "admin" && password == "123456")
             {
-                myDiv.InnerHtml = " <p class='alert alert-success'> OK! </p> ";
+                //myDiv.InnerHtml = " <p class='alert alert-success'> OK! </p> ";
+                //Response.Redirect("../Views/Mod_Portada/page_Portada.aspx");
+                //Server.Transfer("../Views/Mod_Portada/page_Portada.aspx", true);
             }
             else
             {
