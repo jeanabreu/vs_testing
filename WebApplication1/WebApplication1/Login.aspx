@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication1.WebForm1" EnableEventValidation="false"  %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebApplication1.WebForm1" EnableEventValidation="false"  %>
 
 <!DOCTYPE html>
 
@@ -27,7 +27,7 @@
 
                     <div class="panel-heading">
                          
-                        <h3 class="panel-title">Please Sign In</h3>
+                        <h3 class="panel-title">Acceso a Usuarios</h3>
                     </div>
                    
                     <div class="panel-body">
@@ -42,11 +42,11 @@
                                 </div>
                                  <div class="checkbox">
                                     <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                        <input name="remember" type="checkbox" >Recordarme
                                     </label>
                                 </div>
                              
-                                <asp:Button cssClass="btn btn-lg btn-success btn-block" runat="server" ID="Login" OnClick="Login_Click"  Text="Login"/>
+                                <asp:Button cssClass="btn btn-lg btn-success btn-block" runat="server" ID="Login" OnClick="Login_Click"  Text="Acceder"/>
                             
                                 
                             </fieldset>

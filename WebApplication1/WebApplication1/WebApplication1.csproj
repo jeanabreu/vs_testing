@@ -96,6 +96,134 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Views\bower.json" />
+    <Content Include="Views\bower_components\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="Views\bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Views\bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Views\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Views\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Views\bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Views\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Views\bower_components\bootstrap\dist\js\npm.js" />
+    <Content Include="Views\bower_components\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Views\bower_components\bootstrap\Gruntfile.js" />
+    <Content Include="Views\bower_components\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="Views\bower_components\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="Views\bower_components\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="Views\bower_components\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="Views\bower_components\bootstrap\js\affix.js" />
+    <Content Include="Views\bower_components\bootstrap\js\alert.js" />
+    <Content Include="Views\bower_components\bootstrap\js\button.js" />
+    <Content Include="Views\bower_components\bootstrap\js\carousel.js" />
+    <Content Include="Views\bower_components\bootstrap\js\collapse.js" />
+    <Content Include="Views\bower_components\bootstrap\js\dropdown.js" />
+    <Content Include="Views\bower_components\bootstrap\js\modal.js" />
+    <Content Include="Views\bower_components\bootstrap\js\popover.js" />
+    <Content Include="Views\bower_components\bootstrap\js\scrollspy.js" />
+    <Content Include="Views\bower_components\bootstrap\js\tab.js" />
+    <Content Include="Views\bower_components\bootstrap\js\tooltip.js" />
+    <Content Include="Views\bower_components\bootstrap\js\transition.js" />
+    <Content Include="Views\bower_components\bootstrap\package.js" />
+    <Content Include="Views\page_ImprCotizacion.aspx" />
+    <Content Include="Views\website.Master" />
+    <Content Include="Views\bower_components\bootstrap\.bower.json" />
+    <Content Include="Views\bower_components\bootstrap\bower.json" />
+    <Content Include="Views\bower_components\bootstrap\CHANGELOG.md" />
+    <Content Include="Views\bower_components\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="Views\bower_components\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="Views\bower_components\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Views\bower_components\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Views\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Views\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Views\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Views\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\bower_components\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Views\bower_components\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Views\bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Views\bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\bower_components\bootstrap\grunt\.jshintrc" />
+    <Content Include="Views\bower_components\bootstrap\grunt\configBridge.json" />
+    <Content Include="Views\bower_components\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="Views\bower_components\bootstrap\js\.jscsrc" />
+    <Content Include="Views\bower_components\bootstrap\js\.jshintrc" />
+    <Content Include="Views\bower_components\bootstrap\less\.csscomb.json" />
+    <Content Include="Views\bower_components\bootstrap\less\.csslintrc" />
+    <Content Include="Views\bower_components\bootstrap\less\alerts.less" />
+    <Content Include="Views\bower_components\bootstrap\less\badges.less" />
+    <Content Include="Views\bower_components\bootstrap\less\bootstrap.less" />
+    <Content Include="Views\bower_components\bootstrap\less\breadcrumbs.less" />
+    <Content Include="Views\bower_components\bootstrap\less\button-groups.less" />
+    <Content Include="Views\bower_components\bootstrap\less\buttons.less" />
+    <Content Include="Views\bower_components\bootstrap\less\carousel.less" />
+    <Content Include="Views\bower_components\bootstrap\less\close.less" />
+    <Content Include="Views\bower_components\bootstrap\less\code.less" />
+    <Content Include="Views\bower_components\bootstrap\less\component-animations.less" />
+    <Content Include="Views\bower_components\bootstrap\less\dropdowns.less" />
+    <Content Include="Views\bower_components\bootstrap\less\forms.less" />
+    <Content Include="Views\bower_components\bootstrap\less\glyphicons.less" />
+    <Content Include="Views\bower_components\bootstrap\less\grid.less" />
+    <Content Include="Views\bower_components\bootstrap\less\input-groups.less" />
+    <Content Include="Views\bower_components\bootstrap\less\jumbotron.less" />
+    <Content Include="Views\bower_components\bootstrap\less\labels.less" />
+    <Content Include="Views\bower_components\bootstrap\less\list-group.less" />
+    <Content Include="Views\bower_components\bootstrap\less\media.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\alerts.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\buttons.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\center-block.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\forms.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\gradients.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\grid.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\image.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\labels.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\list-group.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\opacity.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\pagination.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\panels.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\resize.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\size.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\table-row.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="Views\bower_components\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="Views\bower_components\bootstrap\less\modals.less" />
+    <Content Include="Views\bower_components\bootstrap\less\navbar.less" />
+    <Content Include="Views\bower_components\bootstrap\less\navs.less" />
+    <Content Include="Views\bower_components\bootstrap\less\normalize.less" />
+    <Content Include="Views\bower_components\bootstrap\less\pager.less" />
+    <Content Include="Views\bower_components\bootstrap\less\pagination.less" />
+    <Content Include="Views\bower_components\bootstrap\less\panels.less" />
+    <Content Include="Views\bower_components\bootstrap\less\popovers.less" />
+    <Content Include="Views\bower_components\bootstrap\less\print.less" />
+    <Content Include="Views\bower_components\bootstrap\less\progress-bars.less" />
+    <Content Include="Views\bower_components\bootstrap\less\responsive-embed.less" />
+    <Content Include="Views\bower_components\bootstrap\less\responsive-utilities.less" />
+    <Content Include="Views\bower_components\bootstrap\less\scaffolding.less" />
+    <Content Include="Views\bower_components\bootstrap\less\tables.less" />
+    <Content Include="Views\bower_components\bootstrap\less\theme.less" />
+    <Content Include="Views\bower_components\bootstrap\less\thumbnails.less" />
+    <Content Include="Views\bower_components\bootstrap\less\tooltip.less" />
+    <Content Include="Views\bower_components\bootstrap\less\type.less" />
+    <Content Include="Views\bower_components\bootstrap\less\utilities.less" />
+    <Content Include="Views\bower_components\bootstrap\less\variables.less" />
+    <Content Include="Views\bower_components\bootstrap\less\wells.less" />
+    <Content Include="Views\bower_components\bootstrap\LICENSE" />
+    <Content Include="Views\bower_components\bootstrap\nuget\bootstrap.less.nuspec" />
+    <Content Include="Views\bower_components\bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="Views\bower_components\bootstrap\nuget\MyGet.ps1" />
+    <Content Include="Views\bower_components\bootstrap\package.json" />
+    <Content Include="Views\bower_components\bootstrap\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -108,32 +236,44 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Views\index.aspx" />
+    <Content Include="Views\pages\blank.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="WebForm1.aspx" />
+    <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\page_ImprCotizacion.aspx.cs">
+      <DependentUpon>page_ImprCotizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\page_ImprCotizacion.aspx.designer.cs">
+      <DependentUpon>page_ImprCotizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\website.Master.cs">
+      <DependentUpon>website.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\website.Master.designer.cs">
+      <DependentUpon>website.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\bower_components\" />
-    <Folder Include="Views\dist\" />
     <Folder Include="Views\js\" />
     <Folder Include="Views\less\" />
-    <Folder Include="Views\pages\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
