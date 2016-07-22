@@ -34,7 +34,7 @@
                                             <asp:TextBox ID="txtConsultar" CssClass ="form-control" runat="server" /> <br />
                                                 <p> 
                                                     <asp:button  CssClass="btn btn-primary" runat="server" ID="btConsultarNumero" OnClick="btConsultarNumero_Click" Text="Consultar"/>
-                                                    <button type="reset" class="btn btn-danger">Limpiar Campos</button>
+                                                    <button type="reset"  class="btn btn-danger">Limpiar Campos</button>
                                                 </p>
                      
                                         </div>
