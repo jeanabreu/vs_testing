@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using WebApplication1.Models;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Web;
 
 
 namespace WebApplication1.Views
@@ -39,8 +41,16 @@ namespace WebApplication1.Views
                     {
                         while (reader.Read())
                         {
-                            NotConsulta.InnerHtml = (" <p class='alert alert-success'> " + reader.GetString(0) + "</p> ");
+                            NotConsulta.InnerHtml = (" <p class='alert alert-success'> El reporte OK " + reader.GetString(0) + "</p> ");
                         }
+                        //============Inicio Reporte en Crystal============//
+                        ReportDocument crCotizaciones = new ReportDocument();
+                        crCotizaciones.Load(Server.MapPath("~/Mod_Reportes/rpt_Cotizacion.rpt"));
+                        crCotizaciones.SetDataSource(ConsultaCmd);
+                        CrystalReportViewer1.ReportSource = crCotizaciones;
+
+                        //============Fin Reporte en Crystal============//
+
                     }
                     else
                     {

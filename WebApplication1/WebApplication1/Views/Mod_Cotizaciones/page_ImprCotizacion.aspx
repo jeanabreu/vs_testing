@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/website.Master" AutoEventWireup="true" CodeBehind="page_ImprCotizacion.aspx.cs" Inherits="WebApplication1.Views.page_ImprCotizacion" %>
-    
+<%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>    
     <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    
+    <script lang="javaScript" type="text/javascript" src="../Views/crystalreportviewers13/js/crviewer/crv.js">
+      </script>
     </asp:Content>
   
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -37,6 +38,10 @@
                                                     <button type="reset"  class="btn btn-danger">Limpiar Campos</button>
                                                 </p>
                      
+                                        </div>
+
+                                        <div>
+                                            <CR:crystalreportviewer id="CrystalReportViewer1" runat="server" autodatabind="true" />
                                         </div>
 
 
