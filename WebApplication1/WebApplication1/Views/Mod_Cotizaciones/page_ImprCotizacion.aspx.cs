@@ -17,9 +17,10 @@ namespace WebApplication1.Views
     public partial class page_ImprCotizacion : System.Web.UI.Page
     {
 
-        protected void Page_Load(object sender, EventArgs e)
+        public void Page_Load(object sender, EventArgs e)
         {
             btnMostrarReporte.Enabled = false;
+            lbTituloReporte.Enabled = false;
         }
 
         //Conexion con BD SQL SERVER//
@@ -98,12 +99,13 @@ namespace WebApplication1.Views
         {
             string n = txtConsultar.Text;
 
+            
             ReportDocument oRep = new ReportDocument();
             ParameterField pf = new ParameterField();
             ParameterFields pfs = new ParameterFields();
             ParameterDiscreteValue pdv = new ParameterDiscreteValue();
             pf.Name = "@numCotizacion";
-            pdv.Value = "00E028602";
+            pdv.Value = n ;
             pf.CurrentValues.Add(pdv);
             pfs.Add(pf);
             CrystalReportViewer1.ParameterFieldInfo = pfs;

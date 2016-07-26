@@ -50,6 +50,7 @@
                                         <div>
                                             <p style="margin-top:25px; border-top:2px solid #ddd;"></p>
                                             <h3>Reporte</h3>
+                                            <asp:Label CssClass="h3" ID="lbTituloReporte" runat="server"></asp:Label>
                                             <p>&nbsp;</p>
                                             <div id="DivReporte" runat="server">
                                                 <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" ToolPanelView="None" />
