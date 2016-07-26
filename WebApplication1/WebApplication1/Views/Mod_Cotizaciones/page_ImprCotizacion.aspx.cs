@@ -9,16 +9,17 @@ using System.Data.SqlClient;
 using WebApplication1.Models;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Web;
+using CrystalDecisions.Shared;
 
 
 namespace WebApplication1.Views
 {
     public partial class page_ImprCotizacion : System.Web.UI.Page
     {
-       
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            btnMostrarReporte.Enabled = false;
         }
 
         //Conexion con BD SQL SERVER//
@@ -41,15 +42,11 @@ namespace WebApplication1.Views
                     {
                         while (reader.Read())
                         {
-                            NotConsulta.InnerHtml = (" <p class='alert alert-success'> El reporte OK " + reader.GetString(0) + "</p> ");
+                            NotConsulta.InnerHtml = (" <p class='alert alert-success'>" + reader.FieldCount + " Registro encontrado a nombre de: " + reader.GetString(0) + "</p> ");
                         }
-                        //============Inicio Reporte en Crystal============//
-                        ReportDocument crCotizaciones = new ReportDocument();
-                        crCotizaciones.Load(Server.MapPath("~/Mod_Reportes/rpt_Cotizacion.rpt"));
-                        crCotizaciones.SetDataSource(ConsultaCmd);
-                        CrystalReportViewer1.ReportSource = crCotizaciones;
 
-                        //============Fin Reporte en Crystal============//
+                        //Habitar Boton luego de Encontrar el registro
+                        btnMostrarReporte.Enabled = true;
 
                     }
                     else
@@ -58,7 +55,7 @@ namespace WebApplication1.Views
                     }
 
                     conexion.Close();
-                    
+
                 }
             }
             catch (SqlException er)
@@ -74,19 +71,47 @@ namespace WebApplication1.Views
 
             if (txtConsultar.Text != null)
             {
-                
+
                 SQLserver_conexion();
-               
+
             }
             if (String.IsNullOrEmpty(a))
             {
                 NotConsulta.InnerHtml = " <p class='alert alert-danger'> El Campo esta vacio o NO es valido </p> ";
             }
-            
+
             /*else
             {
                 NotConsulta.InnerHtml = " <p class='alert alert-danger'> No se encontro el # de Cotizacion o la misma fue Procesada! </p> ";
             }*/
+
+            //============Inicio Reporte en Crystal============//
+            /* ReportDocument crCotizaciones = new ReportDocument();
+             crCotizaciones.Load(Server.MapPath("~/Mod_Reportes/rpt_Cotizacion.rpt"));
+             crCotizaciones.SetDataSource(ConsultaCmd);
+             CrystalReportViewer1.ReportSource = crCotizaciones;*/
+
+            //============Fin Reporte en Crystal============//
         }
+
+        public void btMostrarReporte_Click(object sender, EventArgs e)
+        {
+            string n = txtConsultar.Text;
+
+            ReportDocument oRep = new ReportDocument();
+            ParameterField pf = new ParameterField();
+            ParameterFields pfs = new ParameterFields();
+            ParameterDiscreteValue pdv = new ParameterDiscreteValue();
+            pf.Name = "@numCotizacion";
+            pdv.Value = "00E028602";
+            pf.CurrentValues.Add(pdv);
+            pfs.Add(pf);
+            CrystalReportViewer1.ParameterFieldInfo = pfs;
+            oRep.Load(@"C:\Users\jmabreu\Source\Repos\vs_testing\WebApplication1\WebApplication1\Views\Mod_Reportes\rpt_DetalleCotizacion.rpt");
+            CrystalReportViewer1.ReportSource = oRep;
+            CrystalReportViewer1.ShowFirstPage();
+
+        }
+
     }
 }
