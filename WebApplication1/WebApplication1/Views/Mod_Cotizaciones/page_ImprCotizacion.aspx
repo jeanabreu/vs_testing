@@ -4,12 +4,11 @@
 
  
     <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="crystalreportviewers13/js/crviewer/crv.js"></script>  
-    <link href="../Views/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>  
-    </asp:Content>
+   
+         </asp:Content>
   
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <link href="../Views/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    
     <script src="crystalreportviewers13/js/crviewer/crv.js"></script>
      
       

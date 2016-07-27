@@ -1303,6 +1303,7 @@
     <Content Include="Views\crystalreportviewers13\urlreporting\appletviewer.js" />
     <Content Include="Views\dist\css\sb-admin-2.css" />
     <Content Include="Views\dist\css\timeline.css" />
+    <Content Include="Views\dist\imgs\logo_imca.gif" />
     <Content Include="Views\dist\js\sb-admin-2.js" />
     <Content Include="Views\Mod_Cotizaciones\crystalreportviewers13\ActiveXControls\PrintControl.cab" />
     <Content Include="Views\Mod_Cotizaciones\crystalreportviewers13\ActiveXControls\PrintControl_res_cs.cab" />
@@ -1970,7 +1971,6 @@
     <Content Include="Views\bower_components\bootstrap\nuget\MyGet.ps1" />
     <Content Include="Views\bower_components\bootstrap\package.json" />
     <Content Include="Views\bower_components\bootstrap\README.md" />
-    <Content Include="ClassDiagram1.cd" />
     <Content Include="WebForm2.aspx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
