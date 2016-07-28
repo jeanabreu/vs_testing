@@ -4,13 +4,19 @@
 
  
     <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   
-         </asp:Content>
+    <script src="crystalreportviewers13/js/crviewer/crv.js"></script>  
+ 
+    </asp:Content>
   
     <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+   
     <script src="crystalreportviewers13/js/crviewer/crv.js"></script>
      
+        <style>
+
+            a {color: #337ab7;}
+          
+        </style>
       
         <!-- Contenido -->
         <div id="page-wrapper">
