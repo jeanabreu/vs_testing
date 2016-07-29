@@ -99,7 +99,7 @@ namespace WebApplication1.Views
         {
             string n = txtConsultar.Text;
 
-            
+            P
             ReportDocument oRep = new ReportDocument();
             ParameterField pf = new ParameterField();
             ParameterFields pfs = new ParameterFields();
