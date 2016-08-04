@@ -13,7 +13,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Label ID="label" Text="Label" runat="server"></asp:Label>
+        
         <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" ToolPanelView="None" />
     
     </div>

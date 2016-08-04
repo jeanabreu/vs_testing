@@ -55,32 +55,15 @@
                                                 <asp:TextBox ID="txtConsultar" CssClass="form-control" runat="server" />
                                                 <br />
                                                 <p>
-                                                    <asp:Button CssClass="btn btn-primary" runat="server" ID="btConsultarNumero" OnClick="btConsultarNumero_Click" Text="Consultar" />
-                                                    <asp:Button CssClass="btn btn-primary" runat="server" ID="btnMostrarReporte" OnClick="btMostrarReporte_Click" Text="Mostrar Cotizacion" />
-                                                    <asp:Button CssClass="btn btn-primary" runat="server" ID="Button1" OnClick="OpenWindow" Text="Mostrar" />
-                                                    
-                                                    <!---->
-                                                    
-                                                  
-
-                                                    <!---->
-
-
-                                                    <a href="../Mod_Cotizaciones/page_ImprCotizacion.aspx" class="btn btn-danger" style="float: right" role="button">Nueva Consulta</a>
+                                                    <asp:Button CssClass="btn btn-primary btn-lg" runat="server" ID="btConsultarNumero" OnClick="btConsultarNumero_Click" Text="Consultar" />
+                                                   <!-- <asp:Button CssClass="btn btn-primary" runat="server" ID="btnMostrarReporte" OnClick="btMostrarReporte_Click" Text="Mostrar Cotizacion" />-->
+                                                                                                     
                                                 </p>
 
                                             </div>
 
                                             <div>
-                                                <p style="margin-top: 25px; border-top: 2px solid #ddd;"></p>
-                                                <h3>Reporte</h3>
-                                                <asp:Label CssClass="h3" ID="lbTituloReporte" runat="server"></asp:Label>
-                                                <p>&nbsp;</p>
-                                                <div id="DivReporte" runat="server">
-
-                                                    <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" ToolPanelView="None" />
-
-                                                </div>
+                                                
 
                                             </div>
                                     </div>

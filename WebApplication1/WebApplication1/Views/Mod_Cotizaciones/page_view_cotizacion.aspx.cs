@@ -17,11 +17,11 @@ namespace WebApplication1.Views.Mod_Cotizaciones
         protected void Page_Load(object sender, EventArgs e)
         {
             String valor = Request.QueryString["valor"];
-            
+
+            //label.Text = valor;
             string n = valor;
 
             ReportDocument oRep1 = new ReportDocument();
-
             ParameterField pf = new ParameterField();
             ParameterFields pfs = new ParameterFields();
             ParameterDiscreteValue pdv = new ParameterDiscreteValue();

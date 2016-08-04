@@ -23,7 +23,7 @@ namespace WebApplication1.Views
         public void Page_Load(object sender, EventArgs e)
         {
             btnMostrarReporte.Enabled = false;
-            lbTituloReporte.Enabled = false;
+            
             
                         
         }
@@ -55,8 +55,8 @@ namespace WebApplication1.Views
                             NotConsulta.InnerHtml = (" <p class='alert alert-success'>" + reader.FieldCount + " Registro encontrado a nombre de: " + reader.GetString(0) + "</p> ");
                         }
 
-                        //Habitar Boton luego de Encontrar el registro
-                        btnMostrarReporte.Enabled = true;
+                        //Mostrar el Reporte en un Pop-Up
+                        MostrarReporte();
                     }
                     else
                     {
@@ -94,57 +94,45 @@ namespace WebApplication1.Views
 
         public void btMostrarReporte_Click(object sender, EventArgs e)
         {
-            try
-            {
-               /*
-                if (oRep != null)
-                {
-                    //oRep.Close();
-                    oRep.Dispose();
-                }*/
+            /*  try
+              {
+                 string  n = txtConsultar.Text;
 
-                string  n = txtConsultar.Text;
+                  ReportDocument oRep1 = new ReportDocument();
 
-                ReportDocument oRep1 = new ReportDocument();
-
-                ParameterField pf = new ParameterField();
-                ParameterFields pfs = new ParameterFields();
-                ParameterDiscreteValue pdv = new ParameterDiscreteValue();
-                pf.Name = "@numCotizacion";
-                pdv.Value = n;
-                pf.CurrentValues.Add(pdv);
-                pfs.Add(pf);
-                CrystalReportViewer1.ParameterFieldInfo = pfs;
-                oRep1.Load(Server.MapPath("~\\Views\\Mod_Reportes\\rpt_DetalleCotizacion.rpt"));
-                oRep1.SetDatabaseLogon("Dev", "@6209studio", @"COGNOS-SERVER", "BI_VENTAS"); //Parametros DB 
-                CrystalReportViewer1.ReportSource = oRep1;
-                CrystalReportViewer1.ShowFirstPage();
-               // oRep1.ExportToDisk(ExportFormatType.PortableDocFormat, Server.MapPath("SRVRpt.pdf"));
+                  ParameterField pf = new ParameterField();
+                  ParameterFields pfs = new ParameterFields();
+                  ParameterDiscreteValue pdv = new ParameterDiscreteValue();
+                  pf.Name = "@numCotizacion";
+                  pdv.Value = n;
+                  pf.CurrentValues.Add(pdv);
+                  pfs.Add(pf);
+                  CrystalReportViewer1.ParameterFieldInfo = pfs;
+                  oRep1.Load(Server.MapPath("~\\Views\\Mod_Reportes\\rpt_DetalleCotizacion.rpt"));
+                  oRep1.SetDatabaseLogon("Dev", "@6209studio", @"COGNOS-SERVER", "BI_VENTAS"); //Parametros DB 
+                  CrystalReportViewer1.ReportSource = oRep1;
+                  CrystalReportViewer1.ShowFirstPage();
+                  //oRep1.ExportToDisk(ExportFormatType.PortableDocFormat, Server.MapPath("SRVRpt.pdf"));
+                  //oRep1.ExportToHttpResponse(ExportFormatType.PortableDocFormat);
 
 
+              }
 
-            }
-
-            catch (SqlException er)
-            {
-                NotConsulta.InnerHtml = (" <p class='alert alert-danger'>Error: El reporte no pudo ser generado: ');" + er.Message + "</p> ");
-            }
+              catch (SqlException er)
+              {
+                  NotConsulta.InnerHtml = (" <p class='alert alert-danger'>Error: El reporte no pudo ser generado: ');" + er.Message + "</p> ");
+              }*/
         }
+        
 
-        string reiniciar_pagina()
-        {
-            return "../Mod_Cotizaciones/page_ImprCotizacion.aspx";
-        }
-
-        protected void OpenWindow(object sender, EventArgs e)
+        public void MostrarReporte()
         {
             string valor = txtConsultar.Text;
-            Response.Redirect("page_view_cotizacion.aspx?Valor=" + valor);
+            //Response.Redirect("page_view_cotizacion.aspx?valor=" + valor);
+            //Response.Write("<script type='text/javascript'>window.open('page_view_cotizacion.aspx', 'popup_window','width=700,height=250,left=270,top=180');</script>");
             string url = "page_view_cotizacion.aspx";
-            string s = "window.open('" + url + "', 'popup_window', 'width=300,height=300,left=100,top=100,resizable=yes');";
+            string s = "window.open('" + url + "?valor=" + valor + "', 'popup_window', 'width=950,height=700,left=400,top=300,resizable=yes');";
             ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
-
-            
         }
     }
 }
