@@ -57,34 +57,11 @@
                                                 <p>
                                                     <asp:Button CssClass="btn btn-primary" runat="server" ID="btConsultarNumero" OnClick="btConsultarNumero_Click" Text="Consultar" />
                                                     <asp:Button CssClass="btn btn-primary" runat="server" ID="btnMostrarReporte" OnClick="btMostrarReporte_Click" Text="Mostrar Cotizacion" />
-
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Launch demo modal </button>
-
-
+                                                    <asp:Button CssClass="btn btn-primary" runat="server" ID="Button1" OnClick="OpenWindow" Text="Mostrar" />
+                                                    
                                                     <!---->
                                                     
-                                                    <asp:button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                                                        Launch demo modal
-                                                    </asp:button>
-
-                                                    <!-- Modal -->
-                                                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                                        <div class="modal-dialog" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    ...
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                  
 
                                                     <!---->
 

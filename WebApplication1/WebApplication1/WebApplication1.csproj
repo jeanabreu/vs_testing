@@ -1870,6 +1870,7 @@
     <Content Include="Views\Mod_Cotizaciones\crystalreportviewers13\urlreporting\activexviewer.js" />
     <Content Include="Views\Mod_Cotizaciones\crystalreportviewers13\urlreporting\appletviewer.js" />
     <Content Include="Views\Mod_Cotizaciones\page_ImprCotizacion.aspx" />
+    <Content Include="Views\Mod_Cotizaciones\page_view_cotizacion.aspx" />
     <Content Include="Views\Mod_Portada\page_Portada.aspx" />
     <Content Include="Views\website.Master" />
     <Content Include="Views\bower_components\bootstrap\.bower.json" />
@@ -2023,6 +2024,13 @@
     </Compile>
     <Compile Include="Views\Mod_Cotizaciones\page_ImprCotizacion.aspx.designer.cs">
       <DependentUpon>page_ImprCotizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mod_Cotizaciones\page_view_cotizacion.aspx.cs">
+      <DependentUpon>page_view_cotizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Mod_Cotizaciones\page_view_cotizacion.aspx.designer.cs">
+      <DependentUpon>page_view_cotizacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Mod_Portada\page_Portada.aspx.cs">
       <DependentUpon>page_Portada.aspx</DependentUpon>
