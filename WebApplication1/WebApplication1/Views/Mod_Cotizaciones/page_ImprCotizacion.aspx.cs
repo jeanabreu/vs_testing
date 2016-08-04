@@ -10,35 +10,44 @@ using WebApplication1.Models;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Web;
 using CrystalDecisions.Shared;
+using System.Web.Configuration;
 
 
 namespace WebApplication1.Views
 {
+
     public partial class page_ImprCotizacion : System.Web.UI.Page
     {
+        CrystalDecisions.CrystalReports.Engine.ReportDocument oRep = new CrystalDecisions.CrystalReports.Engine.ReportDocument();
 
         public void Page_Load(object sender, EventArgs e)
         {
             btnMostrarReporte.Enabled = false;
             lbTituloReporte.Enabled = false;
+            
+                        
         }
+
+        public string strConexion = "Data Source = COGNOS-SERVER; Initial Catalog = BI_VENTAS; Persist Security Info = True; User ID = dev; Password=@6209studio";
 
         //Conexion con BD SQL SERVER//
         public void SQLserver_conexion()
         {
-            string strConexion = "Data Source = COGNOS-SERVER; Initial Catalog = BI_VENTAS; Persist Security Info = True; User ID = dev; Password=@6209studio";
 
             try
             {
                 using (SqlConnection conexion = new SqlConnection(strConexion))
                 {
+                    CrystalReportViewer1.Dispose();
+
                     conexion.Open();
 
-                    string ConsultaCmd = "SELECT TOP 1 CUNM FROM PCPCOHD0 WHERE RFDCNO = '" + txtConsultar.Text + "'";
+                    //Consulta -  MSSQL Local string ConsultaCmd = "SELECT TOP 1 CUNM FROM PCPCOHD0 WHERE RFDCNO = '" + txtConsultar.Text + "'";
+                    string ConsultaCmd = " SELECT * FROM OPENQUERY(AS400P, 'SELECT CUNM FROM LIBP16.PCPCOHD0 WHERE RFDCNO = ''" + txtConsultar.Text + "''')";
                     SqlCommand cmd = new SqlCommand(ConsultaCmd, conexion);
                     cmd.CommandType = CommandType.Text;
                     SqlDataReader reader = cmd.ExecuteReader();
-                    //cmd.ExecuteNonQuery();
+                   
                     if (reader.HasRows)
                     {
                         while (reader.Read())
@@ -48,7 +57,6 @@ namespace WebApplication1.Views
 
                         //Habitar Boton luego de Encontrar el registro
                         btnMostrarReporte.Enabled = true;
-
                     }
                     else
                     {
@@ -68,52 +76,71 @@ namespace WebApplication1.Views
         //Evento Boton Consultar//
         public void btConsultarNumero_Click(object sender, EventArgs e)
         {
+
             string a = txtConsultar.Text;
 
             if (txtConsultar.Text != null)
             {
-
-                SQLserver_conexion();
-
+               
+               SQLserver_conexion();
+                
             }
             if (String.IsNullOrEmpty(a))
             {
                 NotConsulta.InnerHtml = " <p class='alert alert-danger'> El Campo esta vacio o NO es valido </p> ";
             }
 
-            /*else
-            {
-                NotConsulta.InnerHtml = " <p class='alert alert-danger'> No se encontro el # de Cotizacion o la misma fue Procesada! </p> ";
-            }*/
-
-            //============Inicio Reporte en Crystal============//
-            /* ReportDocument crCotizaciones = new ReportDocument();
-             crCotizaciones.Load(Server.MapPath("~/Mod_Reportes/rpt_Cotizacion.rpt"));
-             crCotizaciones.SetDataSource(ConsultaCmd);
-             CrystalReportViewer1.ReportSource = crCotizaciones;*/
-
-            //============Fin Reporte en Crystal============//
         }
 
         public void btMostrarReporte_Click(object sender, EventArgs e)
         {
-            string n = txtConsultar.Text;
+            try
+            {
+               /*
+                if (oRep != null)
+                {
+                    //oRep.Close();
+                    oRep.Dispose();
+                }*/
 
-            P
-            ReportDocument oRep = new ReportDocument();
-            ParameterField pf = new ParameterField();
-            ParameterFields pfs = new ParameterFields();
-            ParameterDiscreteValue pdv = new ParameterDiscreteValue();
-            pf.Name = "@numCotizacion";
-            pdv.Value = n ;
-            pf.CurrentValues.Add(pdv);
-            pfs.Add(pf);
-            CrystalReportViewer1.ParameterFieldInfo = pfs;
-            oRep.Load(@"C:\Users\jmabreu\Source\Repos\vs_testing\WebApplication1\WebApplication1\Views\Mod_Reportes\rpt_DetalleCotizacion.rpt");
-            CrystalReportViewer1.ReportSource = oRep;
-            CrystalReportViewer1.ShowFirstPage();
+                string n = txtConsultar.Text;
 
+                ReportDocument oRep1 = new ReportDocument();
+
+                ParameterField pf = new ParameterField();
+                ParameterFields pfs = new ParameterFields();
+                ParameterDiscreteValue pdv = new ParameterDiscreteValue();
+                pf.Name = "@numCotizacion";
+                pdv.Value = n;
+                pf.CurrentValues.Add(pdv);
+                pfs.Add(pf);
+                CrystalReportViewer1.ParameterFieldInfo = pfs;
+                oRep1.Load(Server.MapPath("~\\Views\\Mod_Reportes\\rpt_DetalleCotizacion.rpt"));
+                oRep1.SetDatabaseLogon("Dev", "@6209studio", @"COGNOS-SERVER", "BI_VENTAS"); //Parametros DB 
+                CrystalReportViewer1.ReportSource = oRep1;
+                CrystalReportViewer1.ShowFirstPage();
+
+                
+       
+            }
+
+            catch (SqlException er)
+            {
+                NotConsulta.InnerHtml = (" <p class='alert alert-danger'>Error: El reporte no pudo ser generado: ');" + er.Message + "</p> ");
+            }
+
+            //  oRep.Close();
+            //  oRep.Dispose();
         }
 
+        string reiniciar_pagina()
+        {
+            return "../Mod_Cotizaciones/page_ImprCotizacion.asp";
+        }
+
+        protected void TestButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
