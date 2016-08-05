@@ -17,8 +17,7 @@ namespace WebApplication1.Views.Mod_Cotizaciones
         protected void Page_Load(object sender, EventArgs e)
         {
             String valor = Request.QueryString["valor"];
-
-            //label.Text = valor;
+            
             string n = valor;
 
             ReportDocument oRep1 = new ReportDocument();
@@ -34,6 +33,9 @@ namespace WebApplication1.Views.Mod_Cotizaciones
             oRep1.SetDatabaseLogon("Dev", "@6209studio", @"COGNOS-SERVER", "BI_VENTAS"); //Parametros DB 
             CrystalReportViewer1.ReportSource = oRep1;
             CrystalReportViewer1.ShowFirstPage();
+            //oRep1.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, "ExportedReport");
+           //oRep1.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, "I:\\ASD.pdf");
+
         }
     }
 }

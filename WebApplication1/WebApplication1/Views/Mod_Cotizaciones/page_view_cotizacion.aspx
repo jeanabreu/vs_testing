@@ -14,7 +14,7 @@
     <form id="form1" runat="server">
     <div>
         
-        <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" ToolPanelView="None" />
+        <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" ToolPanelView="ParameterPanel" PageZoomFactor="150" />
     
     </div>
     </form>

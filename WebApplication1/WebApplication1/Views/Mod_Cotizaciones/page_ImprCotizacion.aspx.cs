@@ -22,10 +22,7 @@ namespace WebApplication1.Views
         
         public void Page_Load(object sender, EventArgs e)
         {
-            btnMostrarReporte.Enabled = false;
-            
-            
-                        
+            //btnMostrarReporte.Enabled = false;                    
         }
 
         public string strConexion = "Data Source = COGNOS-SERVER; Initial Catalog = BI_VENTAS; Persist Security Info = True; User ID = dev; Password=@6209studio";
@@ -94,7 +91,7 @@ namespace WebApplication1.Views
 
         public void btMostrarReporte_Click(object sender, EventArgs e)
         {
-            /*  try
+              try
               {
                  string  n = txtConsultar.Text;
 
@@ -121,7 +118,7 @@ namespace WebApplication1.Views
               catch (SqlException er)
               {
                   NotConsulta.InnerHtml = (" <p class='alert alert-danger'>Error: El reporte no pudo ser generado: ');" + er.Message + "</p> ");
-              }*/
+              }
         }
         
 

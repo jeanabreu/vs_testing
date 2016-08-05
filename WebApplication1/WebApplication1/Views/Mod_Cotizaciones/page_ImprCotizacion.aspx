@@ -4,13 +4,14 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
     <script src="crystalreportviewers13/js/crviewer/crv.js"></script>
 
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <script src="crystalreportviewers13/js/crviewer/crv.js"></script>
+    
 
     <style>
         a {
@@ -18,14 +19,7 @@
         }
     </style>
 
-    <script type="text/javascript">
-        $('input[name$="TestButton2"]').on("click", function () {
-
-            $('#example').modal('toggle');
-            return false;
-
-        });
-    </script>
+   
 
     <!-- Contenido -->
     <div id="page-wrapper">
@@ -56,10 +50,13 @@
                                                 <br />
                                                 <p>
                                                     <asp:Button CssClass="btn btn-primary btn-lg" runat="server" ID="btConsultarNumero" OnClick="btConsultarNumero_Click" Text="Consultar" />
-                                                   <!-- <asp:Button CssClass="btn btn-primary" runat="server" ID="btnMostrarReporte" OnClick="btMostrarReporte_Click" Text="Mostrar Cotizacion" />-->
+                                                    <asp:Button CssClass="btn btn-primary" runat="server" ID="btnMostrarReporte" OnClick="btMostrarReporte_Click" Text="Mostrar Cotizacion" />
                                                                                                      
                                                 </p>
 
+                                                <p>
+                                                    <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" />
+                                                </p>
                                             </div>
 
                                             <div>
