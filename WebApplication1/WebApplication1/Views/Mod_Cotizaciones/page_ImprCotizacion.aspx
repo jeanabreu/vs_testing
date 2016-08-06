@@ -50,7 +50,7 @@
                                                 <br />
                                                 <p>
                                                     <asp:Button CssClass="btn btn-primary btn-lg" runat="server" ID="btConsultarNumero" OnClick="btConsultarNumero_Click" Text="Consultar" />
-                                                    <asp:Button CssClass="btn btn-primary" runat="server" ID="btnMostrarReporte" OnClick="btMostrarReporte_Click" Text="Mostrar Cotizacion" />
+                                                   <asp:Button CssClass="btn btn-primary btn-lg" runat="server" ID="btnMostrarReporte" OnClick="btMostrarReporte_Click" Text="Mostrar Cotizacion" />
                                                                                                      
                                                 </p>
 

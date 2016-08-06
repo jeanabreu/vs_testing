@@ -79,7 +79,8 @@ namespace WebApplication1.Views
             if (txtConsultar.Text != null)
             {
                
-               SQLserver_conexion();
+                SQLserver_conexion();
+                MostrarReporte();
                 
             }
             if (String.IsNullOrEmpty(a))
@@ -109,11 +110,13 @@ namespace WebApplication1.Views
                   oRep1.SetDatabaseLogon("Dev", "@6209studio", @"COGNOS-SERVER", "BI_VENTAS"); //Parametros DB 
                   CrystalReportViewer1.ReportSource = oRep1;
                   CrystalReportViewer1.ShowFirstPage();
-                  //oRep1.ExportToDisk(ExportFormatType.PortableDocFormat, Server.MapPath("SRVRpt.pdf"));
-                  //oRep1.ExportToHttpResponse(ExportFormatType.PortableDocFormat);
+                //CrystalReportViewer1.ReuseParameterValuesOnRefresh = true;
+                //oRep1.ExportToDisk(ExportFormatType.PortableDocFormat, Server.MapPath("SRVRpt.pdf"));
+                //oRep1.ExportToHttpResponse(ExportFormatType.PortableDocFormat);
+                //oRep1.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "");
 
 
-              }
+            }
 
               catch (SqlException er)
               {

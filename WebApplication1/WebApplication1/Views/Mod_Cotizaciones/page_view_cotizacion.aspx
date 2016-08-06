@@ -7,14 +7,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-
     <script src="crystalreportviewers13/js/crviewer/crv.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
         
-        <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" ToolPanelView="ParameterPanel" PageZoomFactor="150" />
+        <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" PageZoomFactor="150"  />
     
     </div>
     </form>
