@@ -131,7 +131,7 @@ namespace WebApplication1.Views
             //Response.Redirect("page_view_cotizacion.aspx?valor=" + valor);
             //Response.Write("<script type='text/javascript'>window.open('page_view_cotizacion.aspx', 'popup_window','width=700,height=250,left=270,top=180');</script>");
             string url = "page_view_cotizacion.aspx";
-            string s = "window.open('" + url + "?valor=" + valor + "', 'popup_window', 'width=950,height=700,left=400,top=300,resizable=yes');";
+            string s = "window.open('" + url + "?valor=" + valor + "', 'popup_window', 'width=1350,height=700,left=400,top=300,resizable=yes');";
             ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
         }
     }
