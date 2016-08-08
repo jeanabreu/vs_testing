@@ -80,7 +80,7 @@ namespace WebApplication1.Views
             {
                
                 SQLserver_conexion();
-                MostrarReporte();
+                
                 
             }
             if (String.IsNullOrEmpty(a))
@@ -110,13 +110,7 @@ namespace WebApplication1.Views
                   oRep1.SetDatabaseLogon("Dev", "@6209studio", @"COGNOS-SERVER", "BI_VENTAS"); //Parametros DB 
                   CrystalReportViewer1.ReportSource = oRep1;
                   CrystalReportViewer1.ShowFirstPage();
-                //CrystalReportViewer1.ReuseParameterValuesOnRefresh = true;
-                //oRep1.ExportToDisk(ExportFormatType.PortableDocFormat, Server.MapPath("SRVRpt.pdf"));
-                //oRep1.ExportToHttpResponse(ExportFormatType.PortableDocFormat);
-                //oRep1.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, false, "");
-
-
-            }
+             }
 
               catch (SqlException er)
               {
@@ -126,10 +120,9 @@ namespace WebApplication1.Views
         
 
         public void MostrarReporte()
-        {
+        {   
+            //Pop-up, pasando el valor de la Texbox
             string valor = txtConsultar.Text;
-            //Response.Redirect("page_view_cotizacion.aspx?valor=" + valor);
-            //Response.Write("<script type='text/javascript'>window.open('page_view_cotizacion.aspx', 'popup_window','width=700,height=250,left=270,top=180');</script>");
             string url = "page_view_cotizacion.aspx";
             string s = "window.open('" + url + "?valor=" + valor + "', 'popup_window', 'width=1350,height=700,left=400,top=300,resizable=yes');";
             ClientScript.RegisterStartupScript(this.GetType(), "script", s, true);
