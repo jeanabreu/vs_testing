@@ -14,19 +14,22 @@ namespace WebApplication1.Views.Mod_Cotizaciones
 {
     public partial class page_view_cotizacion : System.Web.UI.Page
     {
-        private ReportDocument oRep1 = new ReportDocument();
-                
+        public ReportDocument oRep1 = new ReportDocument();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+           
+
             //base.Page_Load(sender, e);
             String valor = Request.QueryString["valor"];
 
             string n = valor;
 
-            if (IsPostBack) // Evento PostBack, valida la session y general el reporte
+          
+            if (IsPostBack) // Evento PostBack, valida la session y generar el reporte
             {
-                oRep1 = (ReportDocument)Session["Report"];
-                //Session["Report"] = null;
+                oRep1 = (ReportDocument)Session["Reporte"];
+               
                 ParameterField pf = new ParameterField();
                 ParameterFields pfs = new ParameterFields();
                 ParameterDiscreteValue pdv = new ParameterDiscreteValue();
@@ -34,7 +37,7 @@ namespace WebApplication1.Views.Mod_Cotizaciones
                 pdv.Value = n;
                 pf.CurrentValues.Add(pdv);
                 pfs.Add(pf);
-                Session["Report"] = null;
+                //Session["Reporte"] = null;
                 CrystalReportViewer1.ParameterFieldInfo = pfs;
                 oRep1.Load(Server.MapPath("~\\Views\\Mod_Reportes\\rpt_DetalleCotizacion.rpt"));
                 oRep1.SetDatabaseLogon("Dev", "@6209studio", @"COGNOS-SERVER", "BI_VENTAS"); //Parametros DB 
@@ -43,7 +46,7 @@ namespace WebApplication1.Views.Mod_Cotizaciones
 
             }
 
-            if (Session["Report"] == null) //Generacion de Reporte inicial
+            if (Session["Reporte"] == null) //Generacion de Reporte inicial
             {
                 ParameterField pf = new ParameterField();
                 ParameterFields pfs = new ParameterFields();
@@ -55,36 +58,33 @@ namespace WebApplication1.Views.Mod_Cotizaciones
                 CrystalReportViewer1.ParameterFieldInfo = pfs;
                 oRep1.Load(Server.MapPath("~\\Views\\Mod_Reportes\\rpt_DetalleCotizacion.rpt"));
                 oRep1.SetDatabaseLogon("Dev", "@6209studio", @"COGNOS-SERVER", "BI_VENTAS"); //Parametros DB 
-                Session.Add("Report", oRep1);
+                Session.Add("Reporte", oRep1);
                 CrystalReportViewer1.ReportSource = oRep1;
-                CrystalReportViewer1.ShowFirstPage();
-
-                try
-                {
-                    oRep1.Close();
-                    oRep1.Dispose();
-                }
-                catch { }
+                CrystalReportViewer1.ShowFirstPage();             
             }
-           else 
+            else 
             {
-                oRep1 = (ReportDocument)Session["Report"];
+                oRep1 = (ReportDocument)Session["Reporte"];
                 CrystalReportViewer1.ReportSource = oRep1;
             }
-            
 
         }
         protected void Page_UnLoad(object sender, EventArgs e)
         {
-            
-            /*try
+
+            if (Session["Reporte"] != null) //Remueve la sesion al inicializar 
             {
-                oRep1.Close();
-                oRep1.Dispose();
+                //oRep1.Close();
+                //oRep1.Dispose();
+               // Session.Remove("Reporte");
             }
-            catch { }*/
+
         }
 
-
+        protected void btCerrar_Click(object sender, EventArgs e)
+        {
+            Session.Remove("Reporte");
+            Response.Write("<script type='text/javascript'>window.close();</script>");
+        }
     }
 }
