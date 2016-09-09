@@ -39,8 +39,9 @@ namespace WebApplication1.Views.Mod_Cotizaciones
                 pfs.Add(pf);
                 //Session["Reporte"] = null;
                 CrystalReportViewer1.ParameterFieldInfo = pfs;
-                oRep1.Load(Server.MapPath(@"E:\WebApps\appCotizacion\Views\Mod_Reportes\rpt_DetalleCotizacion.rpt"));
-                //Ruta Local//    oRep1.Load(Server.MapPath("~\\Views\\Mod_Reportes\\rpt_DetalleCotizacion.rpt"));
+                //oRep1.Load(Server.MapPath(@"E:\WebApps\appCotizacion\Views\Mod_Reportes\rpt_DetalleCotizacion.rpt"));
+                //oRep1.Load(Server.MapPath("~\\Views\\Mod_Reportes\\rpt_DetalleCotizacion.rpt"));
+                oRep1.Load(Server.MapPath("rpt_DetalleCotizacion.rpt"));
                 oRep1.SetDatabaseLogon("Dev", "@6209studio", @"COGNOS-SERVER", "BI_VENTAS"); //Parametros DB 
                 CrystalReportViewer1.ReportSource = oRep1;
                 CrystalReportViewer1.ShowFirstPage();             
@@ -57,8 +58,8 @@ namespace WebApplication1.Views.Mod_Cotizaciones
                 pf.CurrentValues.Add(pdv);
                 pfs.Add(pf);
                 CrystalReportViewer1.ParameterFieldInfo = pfs;
-                oRep1.Load(Server.MapPath(@"E:\WebApps\appCotizacion\Views\Mod_Reportes\rpt_DetalleCotizacion.rpt"));
-                //oRep1.Load(Server.MapPath("~\\Views\\Mod_Reportes\\rpt_DetalleCotizacion.rpt"));
+                //oRep1.Load(Server.MapPath(@"E:\WebApps\appCotizacion\Views\Mod_Reportes\rpt_DetalleCotizacion.rpt"));
+                oRep1.Load(Server.MapPath("rpt_DetalleCotizacion.rpt"));
                 oRep1.SetDatabaseLogon("Dev", "@6209studio", @"COGNOS-SERVER", "BI_VENTAS"); //Parametros DB 
                 Session.Add("Reporte", oRep1);
                 CrystalReportViewer1.ReportSource = oRep1;

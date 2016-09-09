@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1.Views.Mod_Reportes {
+namespace WebApplication1.Views.Mod_Cotizaciones {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace WebApplication1.Views.Mod_Reportes {
         
         public override string FullResourceName {
             get {
-                return "WebApplication1.Views.Mod_Reportes.rpt_DetalleCotizacion.rpt";
+                return "WebApplication1.Views.Mod_Cotizaciones.rpt_DetalleCotizacion.rpt";
             }
             set {
                 // Do nothing

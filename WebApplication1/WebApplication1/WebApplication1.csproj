@@ -2624,19 +2624,19 @@
     <Compile Include="Views\Mod_Cotizaciones\page_view_cotizacion.aspx.designer.cs">
       <DependentUpon>page_view_cotizacion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Mod_Cotizaciones\rpt_DetalleCotizacion.cs">
+      <DependentUpon>rpt_DetalleCotizacion.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Views\Mod_Portada\page_Portada.aspx.cs">
       <DependentUpon>page_Portada.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Mod_Portada\page_Portada.aspx.designer.cs">
       <DependentUpon>page_Portada.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Mod_Reportes\rpt_DetalleCotizacion.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rpt_DetalleCotizacion.rpt</DependentUpon>
-      <SubType>Component</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Views\website.Master.cs">
       <DependentUpon>website.Master</DependentUpon>
@@ -2670,7 +2670,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Content Include="Views\Mod_Reportes\rpt_DetalleCotizacion.rpt">
+    <Content Include="Views\Mod_Cotizaciones\rpt_DetalleCotizacion.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_DetalleCotizacion.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
